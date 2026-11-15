@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>图书发行数据分析 · 本地工具(虚构数据)</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <span class="app-title">图书发行数据分析</span>
+    <span class="badge fiction">虚构示例数据</span>
+    <span class="badge" id="asof-badge"></span>
+    <div class="top-right">
+      <label class="switch" title="开启后, 实销/退书采用修订链最新值; 关闭则只看首次上报值">
+        <input type="checkbox" id="mode-toggle" checked>
+        计入迟到修订
+      </label>
+      <button id="theme-toggle" title="切换浅色/深色">◐ 主题</button>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs"></nav>
+</header>
+<main id="app"></main>
+<footer>
+  本工具完全在本地运行: 数据为程序生成的虚构示例, 不对接任何出版社或渠道接口。
+  「退书情景」中的估算值仅用于假设演算, 不代表确定会发生的结果, 也不会写入实际退书数据。
+</footer>
+<div id="tip" role="tooltip"></div>
+<script src="data.js"></script>
+<script src="scenario.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
